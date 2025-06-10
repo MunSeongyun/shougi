@@ -121,17 +121,11 @@ function App() {
                   return
                 }
 
-                if (block.piece) {
+                if (block.piece && block.piece.player === currentPlayer) {
                   setSelected({ x: block.x, y: block.y, piece: block.piece });
                 } else {
                   setSelected(null);
                 }
-
-                // if (block.piece && block.piece.player === currentPlayer) {
-                //   setSelected({ x: block.x, y: block.y, piece: block.piece });
-                // } else {
-                //   setSelected(null);
-                // }
               }} 
             >
               <span
