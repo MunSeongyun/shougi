@@ -1,0 +1,11 @@
+services:
+  shougi:
+    image: node:20-buster
+    container_name: shougi
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./app:/app
+    tty: true
+    working_dir: /app
+    command: bash -c "npm install && npm run dev"
